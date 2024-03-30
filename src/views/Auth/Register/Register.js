@@ -40,4 +40,47 @@ const Register = ({ authRegister, history }) => {
             };
         });
     };
-}
+
+    const formSubmitHandler = (e) => {
+        e.preventDefault();
+        const { firstName, lastName, username, password, confirm } = input;
+
+        const responseData = {
+            firstName,
+            lastName,
+            username,
+            password,
+            authorities: confirm ? ["ROLE_ADMIN", "ROLE_USER"] : ["ROLE_USER"],
+        };
+
+        authRegister(responseData, history);
+    };
+
+    return (
+        <>
+            <div className="m-flexContainer">
+                <div className="a-heroImage"></div>
+
+                <div className="m-formContainer">
+                    <RegisterForm
+                    inputChangeHandler={inputChangeHandler}
+                    formSubmitHandler={formSubmitHandler}
+                    confirmChangeHandler={confirmChangeHandler}
+                     />
+                </div>
+            </div>
+        </>
+    );
+};
+
+const mapStateToProps = (state) => ({
+    user: state.user,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    authRegister: (userData, history) => {
+        dispatch(register(userData, history));
+    },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
