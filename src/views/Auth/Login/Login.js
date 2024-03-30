@@ -32,4 +32,18 @@ const Login = ({ authLogin, history }) => {
 
         authLogin(username, password, history);
     };
+
+    const content = loading ? (
+        <Loading />
+    ) : (
+        <div className="m-flexContainer">
+            <div className="a-heroImage"></div>
+
+            <div className="m-formContainer">
+                <LoginForm inputChangeHandler={inputChangeHandler}
+                    formSubmitHandler={formSubmitHandler}
+                    />
+            </div>
+        </div>
+    );
 }
