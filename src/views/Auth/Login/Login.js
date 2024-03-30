@@ -24,4 +24,12 @@ const Login = ({ authLogin, history }) => {
     useEffect(() => {
         setLoading(false);
     },      [loading]);
+
+    const formSubmitHandler = (e) => {
+        e.preventDefault();
+
+        const { username, password } = input;
+
+        authLogin(username, password, history);
+    };
 }
