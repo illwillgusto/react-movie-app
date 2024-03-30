@@ -46,4 +46,18 @@ const Login = ({ authLogin, history }) => {
             </div>
         </div>
     );
-}
+
+    return <>{content}</>;
+};
+
+const mapStateToProps = (state) => ({
+    user: state.user,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    authLogin: (username, password, history) => {
+        dispatch(login(username, password, history));
+    },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
