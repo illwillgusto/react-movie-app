@@ -9,7 +9,7 @@ import { genres } from "../../../utils";
 import "./MovieCard.scss";
 
 const MovieCard = ({ movie }) => {
-    const baseImageUrl = ``;
+    const baseImageUrl = `https://image.tmdb.org/t/p/w300${movie.poster_path}`;
 
     return (
         <div className="m-movieCard">
