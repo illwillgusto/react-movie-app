@@ -66,3 +66,17 @@ const loginSuccess = (user) => ({
 const loginStarted = () => ({
     type: LOGIN_STARTED
 });
+
+const loginFailed = (error) => ({
+    type: LOGIN_FAILED,
+    payload: {
+        error,
+    },
+});
+
+const registerSuccess = (user) => ({
+    type:REGISTER_SUCCESS,
+    payload: {
+        ...user,
+    },
+});
