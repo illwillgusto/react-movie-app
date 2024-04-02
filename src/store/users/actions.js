@@ -53,5 +53,16 @@ export const login = (username, password, history) => {
              });
 
              history.push("/")
-    }
-}
+    };
+};
+
+const loginSuccess = (user) => ({
+    type: LOGIN_SUCCESS,
+    payload: {
+        ...user,
+    },
+});
+
+const loginStarted = () => ({
+    type: LOGIN_STARTED
+});
