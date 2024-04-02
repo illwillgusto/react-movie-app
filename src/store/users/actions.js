@@ -48,5 +48,10 @@ export const login = (username, password, history) => {
 
                 history.push("/");
              })
+             .catch((err) => {
+                dispatch(loginFailed(err.message));
+             });
+
+             history.push("/")
     }
 }
