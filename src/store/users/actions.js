@@ -28,6 +28,9 @@ export const checkUserAuthentication = () => {
                         };
                         dispatch(loginSuccess(userData));
                     })
+                    .catch((err) => {
+                        console.log(err);
+                    })
         }
     }
 }
