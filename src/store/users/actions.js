@@ -40,5 +40,13 @@ export const checkUserAuthentication = () => {
 export const login = (username, password, history) => {
     return (dispatch) => {
         dispatch(loginStarted());
+
+        axios
+            .post("/auth/login", { username, password })
+             .then((res) => {
+                dispatch(loginSuccess(res.data));
+
+                history.push("/");
+             })
     }
 }
