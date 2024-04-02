@@ -80,3 +80,19 @@ const registerSuccess = (user) => ({
         ...user,
     },
 });
+
+const registerStarted = () => ({
+    type: REGISTER_STARTED,
+});
+
+const registerFailed = (error) => ({
+    type: REGISTER_FAILED,
+    payload: {
+        error,
+    },
+});
+
+export const logoutHandler = (history) => ({
+    type: LOGOUT_SUCCESS,
+    payload: history,
+});
