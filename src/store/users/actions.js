@@ -30,7 +30,15 @@ export const checkUserAuthentication = () => {
                     })
                     .catch((err) => {
                         console.log(err);
-                    })
+
+                        dispatch(loginFailed(err.message));
+                    });
         }
+    };
+};
+
+export const login = (username, password, history) => {
+    return (dispatch) => {
+        dispatch(loginStarted());
     }
 }
