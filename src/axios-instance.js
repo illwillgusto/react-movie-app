@@ -5,7 +5,7 @@ let instance = axios.create({
 });
 
 instance.default.headers.common["Authorization"] = localStorage.getItem(
-    "jwttoken"
+    "wwToken"
 );
 
 export default instance;
