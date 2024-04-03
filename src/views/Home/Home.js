@@ -15,4 +15,8 @@ const Home = (props) => {
         props.getMovies(filterType, currentPage);
     }, [filterType]);
 
+    const movieList = props.movies.movieList.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+    ));
+
 }
