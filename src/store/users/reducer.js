@@ -37,3 +37,17 @@ const userReducer = (state = initialState, action) => {
     }
 };
 
+const loginSuccess = (state, data) => {
+    const {fullName, user} = data;
+
+    localStorage.setItem("wwToken", user.token);
+    localStorage.setItem("username", user.username);
+
+    return {
+        ...state,
+        wwToken: user.token,
+        username: user.username,
+        fullName: fullName,
+        authenticated: user.authenticated,
+    };
+};
