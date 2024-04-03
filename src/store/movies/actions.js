@@ -25,7 +25,7 @@ export const getMovies = (filterType, currentPage = 1) => {
 };
 
 export const changeMovieFilterType = (filterType) => ({
-    type: CHANGE_MOVIE_FILTER,
+    type: CHANGE_MOVIES_FILTER,
     payload: filterType,
 });
 

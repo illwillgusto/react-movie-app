@@ -19,7 +19,7 @@ import {
         return state;
       case GET_MOVIES_STARTED:
         return state;
-      case CHANGE_MOVIE_FILTER:
+      case CHANGE_MOVIES_FILTER:
         return changeMovieFilter(state, action.payload);
       default:
         return state;
