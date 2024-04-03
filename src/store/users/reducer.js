@@ -22,6 +22,7 @@ const userReducer = (state = initialState, action) => {
             return loginSuccess(state, action.payload);
         case LOGIN_FAILED:
             return loginFailed(state, action.payload);
-        
+        case LOGIN_STARTED:
+            return LOGIN_STARTED(state, action.payload);
     }
 }
