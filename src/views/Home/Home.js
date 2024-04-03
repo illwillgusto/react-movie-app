@@ -6,3 +6,13 @@ import MovieCard from "../../Components/Home/MovieCard/MovieCard";
 import MovieFilter from "../../Components/Home/MovieFilter/MovieFilter";
 
 import "./Home.scss";
+
+const Home = (props) => {
+    const { filterType } = props.movies;
+
+    useEffect(() => {
+        const currentPage = props.movies.currentPage;
+        props.getMovies(filterType, currentPage);
+    }, [filterType]);
+
+}
