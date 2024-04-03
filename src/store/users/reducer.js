@@ -75,3 +75,8 @@ const registerSuccess = (state, data) => {
         authenticated,
     };
 };
+
+const registerFailed = (state, error) => {
+    console.log(error);
+    return state;
+};
