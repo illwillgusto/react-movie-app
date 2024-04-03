@@ -2,7 +2,7 @@ import { Link, useHistory } from "react-router-dom";
 import React from "react";
 
 import { connect } from "react-redux";
-import { logoutHandler } from "../../store/user/actions";
+import { logoutHandler } from "../../store/users/actions";
 
 const Navbar = ({ user, logoutHandler }) => {
   const history = useHistory();
