@@ -51,3 +51,9 @@ const loginSuccess = (state, data) => {
         authenticated: user.authenticated,
     };
 };
+
+const loginFailed = (state, error) => {
+    console.log(error);
+    return state;
+};
+
