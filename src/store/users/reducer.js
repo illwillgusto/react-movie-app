@@ -81,6 +81,10 @@ const registerFailed = (state, error) => {
     return state;
 };
 
+const registerStarted = (state) => {
+    return state;
+};
+
 const logoutSuccess = (state, history) => {
     localStorage.removeItem("wwToken");
     localStorage.removeItem("username");
