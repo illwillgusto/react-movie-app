@@ -1,0 +1,44 @@
+$base-font-size: 16px !default;
+
+// Pixels to ems function
+@function px2em($px) {
+  @return ($px / $base-font-size) * 1em;
+}
+
+// Font size and line height mixin
+@mixin font-size($font-size, $line-height: false) {
+  font-size: px2em($font-size);
+
+  /* #{$font-size} */
+  @if $line-height !=false {
+    line-height: ($line-height / $font-size);
+    /* #{$line-height} */
+  }
+}
+
+// @include font-size(16px, 32px);
+$fs-8: 8px; 
+$fs-9: 9px; 
+$fs-10: 10px; 
+$fs-11: 11px; 
+$fs-12: 12px; 
+$fs-13: 13px; 
+$fs-14: 14px; 
+$fs-15: 15px;
+$fs-16: 16px;
+$fs-18: 18px; 
+$fs-19: 19px; 
+$fs-20: 20px; 
+$fs-22: 20px; 
+$fs-24: 24px; 
+$fs-26: 26px; 
+$fs-32: 32px; 
+$fs-40: 40px; 
+$fs-56: 56px; 
+$fs-63: 63px; 
+
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+$bolder: 900;
