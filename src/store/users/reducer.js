@@ -15,3 +15,10 @@ const initialState = {
     watchlist: [],
     authentication: false,
 };
+
+const userReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case LOGIN_SUCCESS:
+            return LOGIN_SUCCESS(state, action.payload);
+    }
+}
