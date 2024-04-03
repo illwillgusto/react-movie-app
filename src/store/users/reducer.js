@@ -16,7 +16,7 @@ const initialState = {
     authentication: false,
 };
 
-const userReducer = (state = initialState, action) => {
+export const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOGIN_SUCCESS:
             return loginSuccess(state, action.payload);
@@ -79,4 +79,13 @@ const registerSuccess = (state, data) => {
 const registerFailed = (state, error) => {
     console.log(error);
     return state;
+};
+
+const logoutSuccess = (state, history) => {
+    localStorage.removeItem("wwToken");
+    localStorage.removeItem("username");
+
+    history.push("/login");
+
+    return {...initialState};
 };
