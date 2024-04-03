@@ -35,3 +35,5 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     getMovies: (currentPage) => dispatch(getMovies(currentPage)),
 });
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
