@@ -28,5 +28,7 @@ const AppRouter = (props) => {
                 </Switch>
             </div>
         </Router>
-    )
-}
+    );
+};
+
+export default AppRouter;
