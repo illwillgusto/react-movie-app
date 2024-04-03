@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Register from "./views/Auth/Register/Register";
 import Login from "./views/Auth/Login/Login";
@@ -15,7 +15,7 @@ const AppRouter = (props) => {
             <Header {...props} />
 
             <div className="m-container">
-                <Switch>
+                <Routes>
                     {/* users */}
                     <Route path="/login" exact component={Login}/>
                     <Route path="/logout" exact component={Logout} />
@@ -25,7 +25,7 @@ const AppRouter = (props) => {
                     <Route path="/movie/:movieId" exact component={Movie} />
                     {/* directors */}
                     <Route path="/" exact component={Home} />
-                </Switch>
+                </Routes>
             </div>
         </Router>
     );
