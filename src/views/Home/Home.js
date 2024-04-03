@@ -30,4 +30,8 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => ({
     movies: state.movies,
-})
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    getMovies: (currentPage) => dispatch(getMovies(currentPage)),
+});
