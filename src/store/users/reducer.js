@@ -57,3 +57,6 @@ const loginFailed = (state, error) => {
     return state;
 };
 
+const loginStarted = (state) => {
+    return state;
+};
