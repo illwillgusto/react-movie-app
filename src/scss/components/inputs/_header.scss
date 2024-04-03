@@ -1,0 +1,9 @@
+@import "../../helpers/variables/initialize";
+
+// variable 
+$header-color: $blue-violet;
+
+.a-header {
+    margin-bottom: $xxl;
+    color: $header-color;
+}
