@@ -56,6 +56,23 @@ export const login = (username, password, history) => {
     };
 };
 
+export const register = (userData, history) => {
+    return (dispatch) => {
+        dispatch(registerStarted());
+
+        axios
+            .post("/auth/register", userData)
+            .then((res) => {
+                dispatch(registerSuccess(res.data));
+
+                history.push("/");
+            })
+            .catch((err) => {
+                dispatch(registerFailed(err.message));
+            });
+    };
+};
+
 const loginSuccess = (user) => ({
     type: LOGIN_SUCCESS,
     payload: {
