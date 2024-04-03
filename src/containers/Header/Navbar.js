@@ -1,11 +1,11 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
 import { connect } from "react-redux";
 import { logoutHandler } from "../../store/users/actions";
 
 const Navbar = ({ user, logoutHandler }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -34,7 +34,7 @@ const Navbar = ({ user, logoutHandler }) => {
           </>
         ) : (
           <li className="m-header__navItem">
-            <button onClick={() => logoutHandler(history)}>Logout</button>
+            <button onClick={() => logoutHandler(navigate)}>Logout</button>
           </li>
         )}
       </ul>
@@ -47,7 +47,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  logoutHandler: (history) => dispatch(logoutHandler(history)),
+  logoutHandler: (navigate) => dispatch(logoutHandler(navigate)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
