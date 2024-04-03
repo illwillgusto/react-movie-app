@@ -18,5 +18,12 @@ const Home = (props) => {
     const movieList = props.movies.movieList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
     ));
+    
+    return (
+        <div className="m-home">
+            <MovieFilter />
 
-}
+            <div className="m-home__movieList">{movieList}</div>
+        </div>
+    );
+};
