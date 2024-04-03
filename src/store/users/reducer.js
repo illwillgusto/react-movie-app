@@ -26,6 +26,14 @@ const userReducer = (state = initialState, action) => {
             return loginStarted(state, action.payload);
         case LOGOUT_SUCCESS:
             return logoutSuccess(state, action.payload);
-        
+        case REGISTER_STARTED:
+            return registerStarted(state, action.payload);
+        case REGISTER_SUCCESS:
+            return registerSuccess(state, action.payload);
+        case REGISTER_FAILED:
+            return registerFailed(state, action.payload);
+        default:
+            return state;
     }
-}
+};
+
