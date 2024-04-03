@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Connect } from "react-import { connect } from 'react-redux'";
+import { connect } from 'react-redux';
 import { changeMovieFilterType } from "../../../store/movies/actions";
 import "../MovieFilter/MovieFilter.scss";
 
 import { filterTypes } from "../../../utils";
-import { connect } from "react-redux";
+
 
 const MovieFilter = (props) => {
     const filterButtons = filterTypes.map((btn) => {
