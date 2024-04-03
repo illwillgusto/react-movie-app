@@ -2,7 +2,7 @@ import {
     GET_MOVIES_FAILED,
     GET_MOVIES_SUCCESS,
     GET_MOVIES_STARTED,
-    CHANGE_MOVIE_FILTER,
+    CHANGE_MOVIES_FILTER,
   } from "./types";
   
   const initialState = {
