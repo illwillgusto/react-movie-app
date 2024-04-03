@@ -16,15 +16,15 @@ const AppRouter = (props) => {
 
             <div className="m-container">
                 <Switch>
+                    {/* users */}
                     <Route path="/login" exact component={Login}/>
                     <Route path="/logout" exact component={Logout} />
                     <Route path="/register" exact component={Register} />
 
-                    {/* users */}
                     {/* movies */}
-                    <Route />
+                    <Route path="/movie/:movieId" exact component={Movie} />
                     {/* directors */}
-                    <Route />
+                    <Route path="/" exact component={Home} />
                 </Switch>
             </div>
         </Router>
