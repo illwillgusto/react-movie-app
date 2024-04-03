@@ -27,3 +27,7 @@ const Home = (props) => {
         </div>
     );
 };
+
+const mapStateToProps = (state) => ({
+    movies: state.movies,
+})
