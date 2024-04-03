@@ -60,3 +60,18 @@ const loginFailed = (state, error) => {
 const loginStarted = (state) => {
     return state;
 };
+
+const registerSuccess = (state, data) => {
+    console.log("REGISTER", data);
+    const { token, user, authenticated } = data;
+
+    localStorage.setItem("wwToken", token);
+    localStorage.setItem("username", user.username);
+    return {
+        ...state,
+        wwToken: token,
+        username: user.username,
+        fullName: user.firstName + " " + user.lastName,
+        authenticated,
+    };
+};
