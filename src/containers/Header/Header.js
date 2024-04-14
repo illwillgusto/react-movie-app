@@ -9,7 +9,7 @@ const Header = (props) => {
     return (
         <header className="m-header">
             <NavLink className="m-header__logo" to="/">
-                Movie Tracker App
+                Track Those Movies
             </NavLink>
             <Navbar {...props} />
         </header>
