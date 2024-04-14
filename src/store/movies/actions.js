@@ -11,9 +11,7 @@ const API_KEY = "e0b4355ea16e8f54e3163c98fa64f1c7"
 export const getMovies = (filterType = 'popular', currentPage = 1) => {
     return (dispatch) => {
         axios
-            .get(`/movie/${filterType}`, {
-                params: {api_key: API_KEY, page: currentPage},
-            })
+            .get(`/movie/${filterType}?api_key${API_KEY}&page=${currentPage}`)
             .then((res) => {
                 dispatch(getMoviesSuccess(res.data));
             })
