@@ -8,7 +8,7 @@ import axios from "../../axios-movie-instance"
 
 const API_KEY = "e0b4355ea16e8f54e3163c98fa64f1c7"
 
-export const getMovies = (filterType, currentPage = 1) => {
+export const getMovies = (filterType = 'popular', currentPage = 1) => {
     return (dispatch) => {
         axios
             .get(`/movie/${filterType}`, {
