@@ -6,7 +6,8 @@ import {
 
 import axios from "../../axios-movie-instance"
 
-const API_KEY = "e0b4355ea16e8f54e3163c98fa64f1c7"
+const API_KEY = "e0b4355ea16e8f54e3163c98fa64f1c7";
+const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const getMovies = (filterType = 'popular', currentPage = 1) => {
     return (dispatch) => {
