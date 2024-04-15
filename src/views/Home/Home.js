@@ -13,7 +13,7 @@ const Home = (props) => {
     useEffect(() => {
         const currentPage = props.movies.currentPage;
         props.getMovies(filterType, currentPage);
-    }, [filterType]);
+    }, [filterType, props.movies.currentPage, props.getMovies]);
 
     const movieList = props.movies.movieList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
@@ -33,7 +33,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    getMovies: (currentPage) => dispatch(getMovies(currentPage)),
+    getMovies: (filterType, currentPage) => dispatch(getMovies(filterType, currentPage)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
