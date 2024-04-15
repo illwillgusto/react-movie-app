@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from 'react-redux';
 import { changeMovieFilterType } from "../../../store/movies/actions";
-import "../MovieFilter/MovieFilter.scss";
+import "../MovieFilter/MovieFilter.scss"
 
 import { filterTypes } from "../../../utils";
 
@@ -12,7 +12,7 @@ const MovieFilter = (props) => {
         let classes = "m-movieFilter__btn";
 
         if (btn.filterTypes === props.movies.filterTypes) {
-            classes += "-active";
+            classes += " -active";
         }
 
         return (
